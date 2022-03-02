@@ -16,7 +16,54 @@ import {
   HStack,
   Divider,
 } from "native-base";
+import { justifyContent } from "styled-system";
 
 export default function FormNativeBase() {
-  return <Box>{/* Code Here */}</Box>;
+  return(
+    <Box
+      safeArea
+      bg="primary.100"
+      flex={1}
+      p={10}
+      w="100%"
+      mx="auto"
+      justifyContent="center"
+    >
+
+      <Heading color="cyan.600" size="lg">
+        Welcome
+      </Heading>
+
+      <Heading color="cyan.600" size="xs">
+        Sign in to continue!
+      </Heading>
+
+      <VStack>
+ 
+        <FormControl>
+          <FormControl.Label _text={{color: "primary.700", fontWeight: 'bold', fontSize: "sm"}}>
+            Email
+          </FormControl.Label>
+          <Input />
+        </FormControl>
+
+        <FormControl>
+          <FormControl.Label _text={{color: "primary.700", fontWeight: 'bold', fontSize: "sm"}}>
+            Password
+          </FormControl.Label>
+          <Input type="password" />
+
+          <Link _text={{fontSize: 'xs', fontWeight: '700', color: "cyan.600"}}>
+            Forgot Password?
+          </Link>
+        </FormControl>
+
+        <VStack space={2}>
+          <Button colorScheme="cyan" _text={{color: "white"}}>
+            Login
+          </Button>
+        </VStack>
+      </VStack>
+    </Box>
+  )
 }
