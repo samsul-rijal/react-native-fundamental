@@ -38,7 +38,7 @@ export default function FormNativeBase() {
         Sign in to continue!
       </Heading>
 
-      <VStack>
+      <VStack space={2} mt={5}>
  
         <FormControl>
           <FormControl.Label _text={{color: "primary.700", fontWeight: 'bold', fontSize: "sm"}}>
@@ -58,7 +58,7 @@ export default function FormNativeBase() {
           </Link>
         </FormControl>
 
-        <VStack space={2}>
+        <VStack space={2} mt={5}>
           <Button colorScheme="cyan" _text={{color: "white"}}>
             Login
           </Button>
